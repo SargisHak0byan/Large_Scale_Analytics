@@ -8,6 +8,7 @@ import plotly.figure_factory as ff
 import pandas as pd
 import models.recco
 import models.moods
+import webbrowser  # Import the webbrowser module
 
 books=pd.read_csv(r'data/books.csv')
 books=books.dropna()
@@ -196,3 +197,4 @@ def click(rbutton,mbutton,tbutton,fbutton):
 
 if __name__ == "__main__":
     app.run_server(port=8050)
+    webbrowser.open('http://127.0.0.1:8050')
